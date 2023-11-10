@@ -80,7 +80,7 @@ def trainModel(model, train_loader, val_loader, test_loader, batch_size = 128, l
 
         print(f'Epoch {epoch+1}: Train | Loss: {train_loss:.3f}, Error: {train_error:.3f}, Acc: {train_acc:.2%} || Val | Loss: {val_loss:.3f}, Error: {val_error:.3f}, Acc: {val_acc:.2%}')
         end_time = time.time() - start_time
-        print(f'Time after Epoch {epoch}: {end_time}')
+        print(f'Time after Epoch {epoch}: {end_time:.2f}s')
         model_path = get_model_name(model.name, batch_size, lr, epoch + 1)
         torch.save(model.state_dict(), model_path)
 

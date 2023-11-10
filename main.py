@@ -6,9 +6,9 @@ import torch.optim
 import torchvision
 import torchvision.transforms as transforms
 
-from data import get_data_loader
+from data import get_data_loader, get_data_loader_ResNet
 from train import trainModel
-from model import TumorDetector
+from model import TumorDetector, TumorDetectorResNet
 
 
 def testModel(model, test_loader):
@@ -50,6 +50,7 @@ if __name__ == '__main__':
     torch.manual_seed(1000)
     classes, train_loader, val_loader, test_loader = get_data_loader()
     model = TumorDetector()
+    # model = TumorDetectorResNet()
 
 
     batch_size = 128
@@ -62,6 +63,6 @@ if __name__ == '__main__':
     
     else:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        model_path = 'model_TumorDetector_bs128_lr0.01_epoch6'
+        model_path = 'model_TumorDetector_bs128_lr0.01_epoch10'
         model.load_state_dict(torch.load(model_path, map_location= device))
         testModel(model, test_loader)
