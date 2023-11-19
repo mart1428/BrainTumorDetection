@@ -2,7 +2,7 @@
 
 ## **Data**
 The data was collected from [Kaggle](https://www.kaggle.com/datasets/preetviradiya/brian-tumor-dataset)
-There are 4600 instances with 55% of them has brain tumor and 45% of them are healthy. The images have various sizes which will then be converted into a 100x100 pixels for CNN model and 256x256 for ResNet as suggested in ![PyTorch documentation](https://www.pytorch.org/hub/pytorch_vision_resnet/).
+There are 4600 instances with 55% of them has brain tumor and 45% of them are healthy. The images have various sizes which will then be converted into a 100x100 pixels for CNN model and 256x256 for ResNet as suggested in [PyTorch documentation](https://www.pytorch.org/hub/pytorch_vision_resnet/).
 
 ## **Context**
 The motivation behind this project is to create a Deep Learning model that is able to detect whether a brain is healthy or not. If this model is accurate in detecting brain tumors, it can be a huge advantage in helping medical teams in detecting brain tumors despite the size or stages.
